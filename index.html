@@ -87,7 +87,7 @@ h2{
     font-weight:bold;
     border:none;
     cursor:pointer;
-    transition: 0.3s;
+    transition:0.3s;
 }
 .btn:hover{background:#003f7f;}
 .notice{
@@ -96,7 +96,7 @@ h2{
     margin-top:15px;
 }
 
-/* --- 修正ポイント：プロフィール写真のスタイル --- */
+/* 代表者写真 */
 .profile-flex{
     display:flex;
     gap:40px;
@@ -109,42 +109,42 @@ h2{
     height:250px;
     background:#eee;
     border-radius:10px;
-    overflow: hidden; /* はみ出し防止 */
+    overflow:hidden;
     display:flex;
     align-items:center;
     justify-content:center;
-    flex-shrink: 0; /* サイズ固定 */
+    flex-shrink:0;
 }
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 比率を維持して枠を埋める */
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-/* --- 修正ポイント：お問い合わせフォームのスタイル --- */
-#contact form {
-    max-width: 700px;
-    margin: auto;
+/* お問い合わせフォーム */
+#contact form{
+    max-width:700px;
+    margin:auto;
 }
-#contact label {
-    display: block;
-    margin-bottom: 20px;
-    font-weight: bold;
+#contact label{
+    display:block;
+    margin-bottom:20px;
+    font-weight:bold;
 }
 #contact input[type="text"],
 #contact input[type="email"],
-#contact textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
-    font-size: 1rem;
+#contact textarea{
+    width:100%;
+    padding:12px;
+    margin-top:8px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-family:inherit;
+    font-size:1rem;
 }
-#contact textarea {
-    height: 250px; /* 枠を大きく設定 */
-    resize: vertical; /* 縦方向のみリサイズ可能に */
+#contact textarea{
+    height:250px;
+    resize:vertical;
 }
 
 ul li{
@@ -172,11 +172,37 @@ footer{
     padding:20px;
     font-size:0.9rem;
 }
+
+/* ===== スマホ対応（ヘッダー縮小） ===== */
 @media(max-width:768px){
-    body{font-size:18px;}
-    .hero h1{font-size:1.9rem;}
-    h2{font-size:1.7rem;}
-    .profile-flex{flex-direction:column;align-items:center;text-align: center;}
+    body{font-size:16px;}
+
+    header{
+        padding:10px 4%;
+    }
+    header strong{
+        font-size:0.95rem;
+    }
+    nav a{
+        margin-left:10px;
+        font-size:0.9rem;
+    }
+
+    .hero{
+        height:70vh;
+    }
+    .hero h1{
+        font-size:1.9rem;
+    }
+    h2{
+        font-size:1.6rem;
+    }
+
+    .profile-flex{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
 }
 </style>
 </head>
@@ -185,7 +211,7 @@ footer{
 
 <header>
 <strong>德永 行政書士事務所</strong>
-<nav aria-label="メインナビゲーション">
+<nav>
     <a href="#profile">事務所概要</a>
     <a href="#business">業務内容</a>
     <a href="#posts">お知らせ</a>
@@ -237,14 +263,13 @@ Googleマップで見る
 <h2>代表者紹介</h2>
 <div class="profile-flex">
 <div class="photo">
-   <img src="myfoto.png" alt="代表者写真">
+<img src="私の写真.png" alt="代表者写真">
 </div>
 <div>
 <p>
 国家公務員として31年間勤務した後、2024年12月より神戸で行政書士として活動を始めました。<br>
-これまで、許認可申請、在留資格認定申請、相続に関するご相談などをお受けしてきました。<br><br>
-「専門的なことを、できるだけわかりやすく」を心がけ、  
-相談してよかったと思っていただける対応を大切にしています。
+許認可申請、在留資格、相続など幅広くご相談をお受けしています。<br><br>
+専門的なことも、できるだけわかりやすくご説明することを大切にしています。
 </p>
 </div>
 </div>
@@ -253,78 +278,8 @@ Googleマップで見る
 <section id="business" style="background:var(--bg);">
 <h2>主な取扱業務</h2>
 <ul style="max-width:700px;margin:auto;">
-<li>建設業の開発許可申請（大規模開発、発電）</li>
+<li>建設業の開発許可申請</li>
 <li>在留資格申請（認可・変更）</li>
-<li>相続に関する手続きや書類作成のご相談</li>
+<li>相続に関するご相談</li>
 </ul>
-<p class="notice" style="text-align:center;">
-※ 行政書士の業務範囲に基づき、対応できる内容をご案内します。
-</p>
 </section>
-
-<section id="posts">
-<h2>お知らせ・投稿</h2>
-
-<div class="post">
-<p><strong>2024年12月15日</strong></p>
-<p>
-行政書士事務所を開設しました。<br>
-「ちょっと聞いてみたい」そんな気持ちに寄り添える事務所を目指しています。
-</p>
-</div>
-
-<div class="archive">
-<h3>アーカイブ</h3>
-<ul>
-<li><a href="#">2024年12月</a></li>
-</ul>
-</div>
-</section>
-
-<section>
-<h2>関係ウェブサイト</h2>
-<div class="links">
-<ul>
-<li><a href="https://hyogo-gyosei.or.jp/" target="_blank">兵庫県行政書士会</a></li>
-<li><a href="https://www.moj.go.jp/isa/" target="_blank">出入国在留管理庁</a></li>
-<li><a href="https://www.moj.go.jp/" target="_blank">法務省</a></li>
-<li><a href="https://www.e-gov.go.jp/" target="_blank">e-Gov（電子政府の総合窓口）</a></li>
-</ul>
-</div>
-</section>
-
-<section id="contact">
-<h2>お問い合わせ</h2>
-
-<form action="https://formspree.io/f/xxxxxxxx" method="POST">
-<label>
-お名前（必須）
-<input type="text" name="name" required>
-</label>
-
-<label>
-メールアドレス（必須）
-<input type="email" name="email" required>
-</label>
-
-<label>
-お問い合わせ内容（必須）
-<textarea name="message" required></textarea>
-</label>
-
-<p class="notice">
-※ こちらはご相談窓口です。正式なご依頼は内容確認後となります。
-</p>
-
-<div style="text-align:center;margin-top:30px;">
-<button type="submit" class="btn">この内容で相談する</button>
-</div>
-</form>
-</section>
-
-<footer>
-<p>© 2024 德永良雄 行政書士事務所</p>
-</footer>
-
-</body>
-</html>
