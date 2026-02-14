@@ -1,346 +1,188 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JR Buie | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 全体のスタイル設定 */
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #1a1a1a;
+            --accent-color: #555;
+            --card-bg: #ffffff;
+        }
 
-<title>德永良雄 行政書士事務所｜神戸市東灘区 神戸ファッションマート</title>
-<meta name="description" content="神戸市東灘区（神戸ファッションマート）の德永良雄行政書士事務所。建設業許可、在留資格、相続のことなど、まずはお気軽にご相談ください。">
-<meta name="robots" content="index,follow">
+        body {
+            font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+        /* コンテナ */
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 60px 20px;
+        }
 
-<style>
-:root{
-    --main:#005bac;
-    --accent:#6fbbe8;
-    --bg:#f4fbff;
-    --hero:#d9f0ff;
-    --text:#333;
-    --white:#fff;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{
-    font-family:'Noto Sans JP',sans-serif;
-    line-height:1.9;
-    font-size:17px;
-    color:var(--text);
-    background:var(--bg);
-}
-header{
-    background:#fff;
-    padding:15px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-header strong{color:var(--main);}
-nav a{
-    margin-left:20px;
-    text-decoration:none;
-    font-weight:bold;
-    color:#333;
-}
-section{
-    padding:80px 10%;
-    background:#fff;
-    margin:20px 0;
-}
-h2{
-    text-align:center;
-    color:var(--main);
-    margin-bottom:40px;
-    font-size:2rem;
-}
-.hero{
-    height:80vh;
-    background:var(--hero);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-.hero h1{
-    font-size:2.6rem;
-    line-height:1.4;
-    margin-bottom:20px;
-}
-.box{
-    background:#fff;
-    padding:32px;
-    border-radius:15px;
-    max-width:650px;
-    margin:auto;
-    font-size:1.05rem;
-}
-.btn{
-    display:inline-block;
-    padding:12px 40px;
-    background:var(--main);
-    color:#fff;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:bold;
-    border:none;
-    cursor:pointer;
-    transition: 0.3s;
-}
-.btn:hover{background:#003f7f;}
-.notice{
-    font-size:0.9rem;
-    color:#555;
-    margin-top:15px;
-}
+        /* ヘッダー部分 */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
 
-/* プロフィール写真のスタイル */
-.profile-flex{
-    display:flex;
-    gap:40px;
-    max-width:900px;
-    margin:auto;
-    align-items:center;
-}
-.photo{
-    width:200px;
-    height:250px;
-    background:#eee;
-    border-radius:10px;
-    overflow: hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink: 0;
-}
-.photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
 
-/* お問い合わせフォームのスタイル */
-#contact form {
-    max-width: 700px;
-    margin: auto;
-}
-#contact label {
-    display: block;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
-    font-size: 1rem;
-}
-#contact textarea {
-    height: 250px; /* 枠を大きく設定 */
-    resize: vertical;
-}
+        header p {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+        }
 
-ul li{
-    margin-bottom:10px;
-    font-size:1.05rem;
-}
-.post{
-    max-width:800px;
-    margin:auto;
-    border-bottom:1px solid #ddd;
-    padding-bottom:20px;
-    margin-bottom:20px;
-}
-.archive ul, .links ul{
-    list-style:none;
-    padding-left:0;
-}
-.archive li, .links li{
-    margin-bottom:8px;
-}
-footer{
-    background:var(--main);
-    color:#fff;
-    text-align:center;
-    padding:20px;
-    font-size:0.9rem;
-}
+        /* 自己紹介セクション */
+        .about {
+            margin-bottom: 50px;
+            text-align: center;
+        }
 
-/* --- スマホ用調整 --- */
-@media(max-width:768px){
-    body{font-size:16px;} /* 全体の文字を少し調整 */
-    
-    /* 修正ポイント：ヘッダーを約3分の2にコンパクト化 */
-    header {
-        padding: 8px 3%; /* 上下パディングを縮小 */
-    }
-    header strong {
-        font-size: 14px; /* 文字サイズ縮小 */
-        line-height: 1.2; /* 行間を詰め気味に */
-    }
-    nav a {
-        margin-left: 10px; /* メニューの間隔を半分に */
-        font-size: 13px;   /* メニュー文字サイズ縮小 */
-    }
+        /* プロジェクト/リンクのグリッド (Readdy風) */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
 
-    .hero h1{font-size:1.8rem;}
-    h2{font-size:1.6rem;}
-    .profile-flex{flex-direction:column;align-items:center;text-align: center;}
-}
-</style>
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* カードのスタイル */
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* 特徴的な大きなカード (フルサイズ) */
+        .card.full {
+            grid-column: 1 / -1;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .card.full p {
+            color: #ccc;
+        }
+
+        /* ソーシャルアイコン */
+        .social-links {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.6;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-bottom: 40px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-<strong>德永 行政書士事務所</strong>
-<nav aria-label="メインナビゲーション">
-    <a href="#profile">事務所概要</a>
-    <a href="#business">業務内容</a>
-    <a href="#posts">お知らせ</a>
-    <a href="#contact">お問い合わせ</a>
-</nav>
-</header>
+    <div class="container">
+        <header>
+            <h1>JR Buie</h1>
+            <p>Design Technologist & Creative Coder</p>
+        </header>
 
-<section class="hero">
-<div>
-<h1>
-神戸の行政書士です<br>
-誠意をもってご相談に対応いたします
-</h1>
-<div class="box">
-<p><strong>まずはお話をお聞かせください</strong></p>
-<p>
-「どこに相談したらいいかわからない」<br>
-そんな段階からでも、お気軽にご連絡ください。
-</p>
-<p>
-TEL：070-9192-2524<br>
-Mail：info@second-penguin.com
-</p>
-<a href="#contact" class="btn">相談してみる</a>
-<p class="notice">
-※ 内容によってはお引き受けできない場合もありますが、<br>
-可能な範囲で方向性のご案内はいたします。
-</p>
-</div>
-</div>
-</section>
+        <div class="grid">
+            <a href="#" class="card full">
+                <h3>Featured Work</h3>
+                <p>最新のプロジェクトや制作物の詳細はこちらからご覧いただけます。</p>
+            </a>
 
-<section id="profile">
-<h2>事務所概要</h2>
-<p style="text-align:center;">
-<strong>德永良雄 行政書士事務所</strong><br>
-〒658-0032<br>
-兵庫県神戸市東灘区向洋町中6-9<br>
-<strong>神戸ファッションマート（六甲アイランド）</strong>
-</p>
-<p style="text-align:center;margin-top:10px;">
-<a href="https://maps.google.com/?q=神戸ファッションマート" target="_blank">
-Googleマップで見る
-</a>
-</p>
-</section>
+            <a href="#" class="card">
+                <h3>Projects</h3>
+                <p>開発したアプリやツールのアーカイブ</p>
+            </a>
 
-<section>
-<h2>代表者紹介</h2>
-<div class="profile-flex">
-<div class="photo">
-   <img src="myfoto.png" alt="代表者写真">
-</div>
-<div>
-<p>
-国家公務員として31年間勤務した後、2024年12月より神戸で行政書士として活動を始めました。<br>
-これまで、許認可申請、在留資格認定申請、相続に関するご相談などをお受けしてきました。<br><br>
-「専門的なことを、できるだけわかりやすく」を心がけ、  
-相談してよかったと思っていただける対応を大切にしています。
-</p>
-</div>
-</div>
-</section>
+            <a href="#" class="card">
+                <h3>Writing</h3>
+                <p>技術的なブログや日々の思考</p>
+            </a>
 
-<section id="business" style="background:var(--bg);">
-<h2>主な取扱業務</h2>
-<ul style="max-width:700px;margin:auto;">
-<li>建設業の開発許可申請（大規模開発、発電）</li>
-<li>在留資格申請（認可・変更）</li>
-<li>相続に関する手続きや書類作成のご相談</li>
-</ul>
-<p class="notice" style="text-align:center;">
-※ 行政書士の業務範囲に基づき、対応できる内容をご案内します。
-</p>
-</section>
+            <a href="#" class="card">
+                <h3>Photography</h3>
+                <p>趣味で撮影している写真のギャラリー</p>
+            </a>
 
-<section id="posts">
-<h2>お知らせ・投稿</h2>
+            <a href="mailto:your-email@example.com" class="card">
+                <h3>Contact</h3>
+                <p>お仕事の依頼やお問い合わせはこちら</p>
+            </a>
+        </div>
 
-<div class="post">
-<p><strong>2024年12月15日</strong></p>
-<p>
-行政書士事務所を開設しました。<br>
-「ちょっと聞いてみたい」そんな気持ちに寄り添える事務所を目指しています。
-</p>
-</div>
+        <div class="social-links">
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
 
-<div class="archive">
-<h3>アーカイブ</h3>
-<ul>
-<li><a href="#">2024年12月</a></li>
-</ul>
-</div>
-</section>
-
-<section>
-<h2>関係ウェブサイト</h2>
-<div class="links">
-<ul>
-<li><a href="https://hyogo-gyosei.or.jp/" target="_blank">兵庫県行政書士会</a></li>
-<li><a href="https://www.moj.go.jp/isa/" target="_blank">出入国在留管理庁</a></li>
-<li><a href="https://www.moj.go.jp/" target="_blank">法務省</a></li>
-<li><a href="https://www.e-gov.go.jp/" target="_blank">e-Gov（電子政府の総合窓口）</a></li>
-</ul>
-</div>
-</section>
-
-<section id="contact">
-<h2>お問い合わせ</h2>
-
-<form action="https://formspree.io/f/xxxxxxxx" method="POST">
-<label>
-お名前（必須）
-<input type="text" name="name" required>
-</label>
-
-<label>
-メールアドレス（必須）
-<input type="email" name="email" required>
-</label>
-
-<label>
-お問い合わせ内容（必須）
-<textarea name="message" required></textarea>
-</label>
-
-<p class="notice">
-※ こちらはご相談窓口です。正式なご依頼は内容確認後となります。
-</p>
-
-<div style="text-align:center;margin-top:30px;">
-<button type="submit" class="btn">この内容で相談する</button>
-</div>
-</form>
-</section>
-
-<footer>
-<p>© 2024 德永良雄 行政書士事務所</p>
-</footer>
+        <footer>
+            &copy; 2024 JR Buie. Built with Simplicity.
+        </footer>
+    </div>
 
 </body>
 </html>
