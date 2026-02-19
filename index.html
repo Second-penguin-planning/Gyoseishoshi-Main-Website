@@ -209,11 +209,6 @@ h2::after {
     }
 }
 
-.profile-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-}
 .profile-sub {
     background: white;
     padding: 2rem;
@@ -383,6 +378,40 @@ footer p {
 section {
     scroll-margin-top: 140px;
 }
+/* --- Second Penguin Highlight --- */
+.second-penguin-box {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #eef3f8, #e3edf7);
+    border-left: 5px solid var(--accent);
+    border-radius: 10px;
+}
+
+.sp-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.sp-link {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.sp-link:hover {
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+.sp-note {
+    font-size: 0.8rem;
+    color: var(--text-sub);
+}
+
 </style>
 
 </head>
@@ -400,6 +429,7 @@ section {
         <a href="#services">サービス</a>
         <a href="#pricing">料金プラン</a>
         <a href="#testimonials">お客様の声</a>
+        <a href="#office">事務所情報</a>
         <a href="#contact">お問い合わせ</a>
     </nav>
 </header>
@@ -420,7 +450,7 @@ section {
 
     <!-- 写真 -->
     <div class="profile-photo">
-        <img src="Myfoto.png" alt="德永良雄プロフィール写真">
+        <img src="myfoto.png" alt="德永良雄プロフィール写真">
     </div>
 
     <!-- プロフィール本文 -->
@@ -451,18 +481,21 @@ section {
                     <li>ダム・許認可行政</li>
                     <li>在インドネシア日本大使館</li>
                     <li>防災専門家（海外勤務）</li>
+　　　　　　　　　 <li>日本語教師（海外勤務）</li>
                     <li>登録支援機関勤務</li>
                 </ul>
             </div>
         </div>
 
-       <p style="font-size:0.85rem; margin-top:1rem; color:var(--text-sub);">
-※外国人雇用・支援事業
-<a href="https://second-penguin-lanning.github.io/SP-Main-Website/" target="_blank" style="color:var(--primary); font-weight:600; text-decoration:none;">
-セコンドペンギン企画
-</a>
-も運営。
-</p>
+      <div class="second-penguin-box">
+    <p class="sp-title">外国人雇用・支援事業</p>
+    <a href="https://second-penguin-lanning.github.io/SP-Main-Website/" 
+       target="_blank" 
+       class="sp-link">
+       ▶ セコンドペンギン企画 公式サイトはこちら
+    </a>
+    <p class="sp-note">※別サイト（Second Penguin Planning）へ移動します</p>
+</div>
     </div>
 
 </div>
@@ -553,36 +586,54 @@ section {
     <a href="tel:070-9192-2524" class="btn-white">今すぐ電話する</a>
 </section>
 
-   <!-- Contact & Access -->
-    <section id="contact" class="bg-light-section">
+<!-- Office Information Section -->
+<section id="office" class="bg-light-section">
     <div class="container">
-        <h2>事務所情報・お問い合わせ</h2>
+        <h2>事務所情報</h2>
+
         <table class="info-table">
             <tr>
                 <th>事務所名</th>
-                <td>德永良雄行政書士事務所 (行政書士法人 サポートオフィス) [2]</td>
+                <td>德永良雄行政書士事務所 (行政書士法人 サポートオフィス)</td>
             </tr>
             <tr>
                 <th>所在地</th>
-                <td>〒658-0032 兵庫県神戸市東灘区向洋町中6-9 神戸ファッションマート 4N-07-01 [2, 4]</td>
+                <td>
+                    〒658-0032<br>
+                    兵庫県神戸市東灘区向洋町中6-9<br>
+                    神戸ファッションマート 4N-07-01
+                </td>
             </tr>
             <tr>
                 <th>電話番号</th>
-                <td>070-9192-2524 (受付: 平日 8:30〜17:00) [2, 4]</td>
+                <td>070-9192-2524</td>
             </tr>
             <tr>
                 <th>メール</th>
-                <td>info@tokunaga-gyosei.jp (24時間受付) [2, 4]</td>
+                <td>info@tokunaga-gyosei.jp</td>
             </tr>
             <tr>
                 <th>営業時間</th>
-                <td>平日 8:30〜17:00 / 土曜 9:00〜15:00 (事前予約制) <br>※日曜・祝日 休業。緊急時は時間外対応可 [2, 4]</td>
+                <td>
+                    平日 8:30〜17:00<br>
+                    土曜 9:00〜15:00（予約制）<br>
+                    ※日曜・祝日休業
+                </td>
             </tr>
             <tr>
-                <th>開業・登録</th>
-                <td>2024年12月開業 / 日本行政書士連合会 第24303656号 [2]</td>
+                <th>登録番号</th>
+                <td>日本行政書士連合会 第24303656号</td>
             </tr>
         </table>
+
+    </div>
+</section>
+
+   <!-- Contact & Access -->
+    <section id="contact" class="bg-light-section">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+       
 <div class="contact-form">
     <h3 style="margin-top:0;">お問い合わせフォーム</h3>
     <form action="mailto:info@tokunaga-gyosei.jp" method="post" enctype="text/plain">
