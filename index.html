@@ -235,11 +235,6 @@ h2::after {
     text-align: left;
 }
 
-.form-wrapper {
-  max-width: 700px;   /* ← 好みで600〜800に調整 */
-  margin: 0 auto;     /* 中央寄せ */
-}
-
 /* Footer */
 footer {
     background: var(--primary);
@@ -410,55 +405,7 @@ section {
     font-size: 0.8rem;
     color: var(--text-sub);
 }
-/* ===============================
-   Hamburger Menu (Mobile)
-================================= */
 
-/* ハンバーガーボタン */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: white;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-/* スマホ時 */
-@media (max-width: 768px){
-
-    .header-nav {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: var(--primary);
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        display: none;
-        padding: 1rem 0;
-    }
-
-    .header-nav a {
-        padding: 1rem 0;
-        display: block;
-        border-top: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .header-nav.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
 </style>
 
 </head>
@@ -470,12 +417,7 @@ section {
     <img src="行政書士マーク.png" alt="行政書士マーク">
     <span>德永 行政書士事務所</span>
 </div>
-   <!-- ハンバーガー -->
-   <div class="hamburger" onclick="toggleMenu()">
-       <span></span>
-       <span></span>
-       <span></span>
-   </div>
+
     <nav class="header-nav">
         <a href="#about">代表から</a>
         <a href="#services">サービス</a>
@@ -682,22 +624,45 @@ section {
     <section id="contact" class="bg-light-section">
     <div class="container">
         <h2>お問い合わせ</h2>
-   <div class="contact-form">
-  
-<div class="form-wrapper">
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeJPYhr5yeNR1IyZvTHCWVO5s_os7ff83NjhB02nPmMgARSmA/viewform?embedded=true"
-  width="100%"
-  height="1100"
-  frameborder="0"></iframe>
-</div>
+       
+<div class="contact-form">
+    <h3 style="margin-top:0;">お問い合わせフォーム</h3>
+    <form action="mailto:info@tokunaga-gyosei.jp" method="post" enctype="text/plain">
+        
+        <div class="form-group">
+            <label for="name">お名前（必須）</label>
+            <input type="text" id="name" name="お名前" required>
+        </div>
 
+        <div class="form-group">
+            <label for="email">メールアドレス（必須）</label>
+            <input type="email" id="email" name="メールアドレス" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">電話番号（任意）</label>
+            <input type="tel" id="phone" name="電話番号">
+        </div>
+
+        <div class="form-group">
+            <label for="message">お問い合わせ内容（必須）</label>
+            <textarea id="message" name="お問い合わせ内容" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>
+                <input type="checkbox" required>
+                送信することで個人情報の取扱いに同意したものとみなします。
+            </label>
+        </div>
+
+        <button type="submit">送信する</button>
+
+        <p class="privacy-note">
+            ※内容確認後、通常1営業日以内にご返信いたします。
+        </p>
+    </form>
 </div>
-<p style="font-size:14px; color:#666; margin-top:20px;">
-※本フォームはGoogleフォームを利用しています。<br>
-※ご入力いただいた個人情報は、当事務所の
-<a href="privacy.html" target="_blank">プライバシーポリシー</a>
-に基づき適切に管理いたします。
-</p>
 </div>
     </section>
 
@@ -750,10 +715,6 @@ section {
     <p>信頼と実績の行政書士事務所として、お客様のビジネスを全力でサポートいたします [5]。</p>
     <p>&copy; 2024 行政書士法人 サポートオフィス. All rights reserved. [5]</p>
 </footer>
-<script>
-function toggleMenu() {
-    document.querySelector(".header-nav").classList.toggle("active");
-}
-</script>
+
 </body>
 </html>
