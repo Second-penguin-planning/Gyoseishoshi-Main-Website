@@ -1,3 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行政書士 サポートオフィス | 徳永良雄行政書士事務所</title>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #0b3d5c;
+    --accent: #f5a623;
+    --bg-light: #f4f7fa;
+    --text-main: #222;
+    --text-sub: #555;
+    --white: #ffffff;
+    --border: #e5eaf0;
+}
+
+/* Base */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 90px;
+    background: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+/* Header (Logo + Navigation unified) */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 1.2rem;   /* ← 余白を少し縮める */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* ← はみ出し防止（重要） */
+    z-index: 1000;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.header-logo img {
+    height: 32px;
+    width: auto;
+}
+
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;   /* ← 少し狭める */
+    flex-wrap: wrap;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.header-nav a:hover {
+    color: var(--accent);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, var(--primary), #145a86);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.hero h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+.hero .btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: var(--accent);
+    color: white;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.hero .btn:hover {
+    background: #ffb84d;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2.5rem 1.5rem;  /* ← 4rem → 2.5rem */
+}
+
+/* Section */
+section {
+    margin-bottom: 4rem;
+}
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    display: block;
+    margin: 0.7rem auto 0;
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2rem;
+}
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-6px);
+}
+.price-tag {
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Profile */
+/* --- Compact Profile Layout --- */
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 220px;  /* ← 写真を右側へ */
+    gap: 2rem;
+    align-items: start;
+}
+
+.profile-photo img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.profile-main h3 {
+    margin-top: 0;
+}
+
+.profile-main p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.profile-compact-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.profile-compact-list ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+@media (max-width: 768px){
+    .profile-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-compact-list {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        margin: 0 auto;
+    }
+}
+
+.profile-sub {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* Table */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.info-table th,
+.info-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+.info-table th {
+    background: #f8fafc;
+    width: 30%;
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+footer p {
+    opacity: 0.85;
+    margin: 0.5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+
+    .header-logo img {
+        height: 24px;
+    }
+
+}
+
+/* Contact Form */
+.contact-form {
+    background: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #ffb84d;
+}
+
+.privacy-note {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    color: var(--text-sub);
+}
+/* --- Section Accent Background --- */
+.bg-light-section {
+    padding: 3rem 0;   /* ← 5rem → 3rem */
+}
+
+.bg-accent-section {
+    padding: 3rem 0;   /* ← 5rem → 3rem */
+}
+
+/* セクション内のcontainer余白リセット */
+.bg-light-section .container,
+.bg-accent-section .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* お客様の声デザイン強化 */
+.testimonial-item {
+    background: white;
+    padding: 2rem;
+    border-left: 6px solid var(--accent);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.testimonial-name {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* CTA帯 */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary), #145a86);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.cta-section h2 {
+    color: white;
+}
+
+.cta-section .btn-white {
+    background: white;
+    color: var(--primary);
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: 0.3s;
+}
+
+.cta-section .btn-white:hover {
+    background: #f5f5f5;
+}
+section {
+    scroll-margin-top: 100px;
+}
 /* --- Second Penguin Highlight (Very Light Yamabuki) --- */
 .second-penguin-box {
     margin-top: 2rem;
@@ -32,4 +407,414 @@
 /* ホバー時 */
 .sp-link:hover {
     background: #c7def0;
+}}/* ハンバーガー */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
 }
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* ×マーク変化 */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* スマホ用 */
+@media (max-width: 768px){
+
+    .hamburger {
+        display: flex;
+    }
+
+    .header-nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--primary);
+        flex-direction: column;
+        width: 220px;
+        padding: 1rem;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .header-nav a {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .header-nav.show {
+        display: flex;
+    }
+}
+footer a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+</style>
+
+</head>
+<body>
+
+<header>
+   <div class="header-logo">
+        <img src="logo_SP2.png" alt="logo_SP2">
+        <img src="行政書士マーク.png" alt="行政書士マーク">
+        <span>德永 行政書士事務所</span>
+   </div>
+
+   <!-- ハンバーガーボタン -->
+   <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+   </div>
+
+    <nav class="header-nav" id="nav">
+        <a href="#about">代表から</a>
+        <a href="#services">サービス</a>
+        <a href="#pricing">料金プラン</a>
+        <a href="#testimonials">お客様の声</a>
+        <a href="#office">事務所情報</a>
+        <a href="#contact">お問い合わせ</a>
+        <a href="#links">関係リンク</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container" style="padding:0;">
+       <h2>
+事業の種々の申請、暮らしでの相続、遺言そして在留許可のことで<br>
+「どこに相談したらいいかわからない」<br>
+そんな段階からでも、お気軽にご連絡下さい。
+</h2>
+        <p>神戸の行政書士・徳永良雄が誠意をもってご対応いたします。</p>
+        <a href="#contact" class="btn">お問い合わせはこちら</a>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-light-section">
+    <div class="container">
+        <h2>代表から</h2>
+      <div class="profile-container">
+
+    <!-- プロフィール本文 -->
+    <div class="profile-main">
+        <h3>德永 良雄 (Yoshio Tokunaga)</h3>
+        <p><strong>行政書士 / 代表</strong></p>
+
+        <p>
+        国家公務員として31年間勤務後、神戸にて開業。
+        許認可申請・在留資格申請・相続業務を中心に対応。
+        「専門的なことを、できるだけわかりやすく」を信条に、
+        ご相談者様と共に歩むサポートを行っています。
+        </p>
+
+        <div class="profile-compact-list">
+            <div>
+                <strong>資格</strong>
+                <ul>
+                    <li>行政書士 / 申請取次</li>
+                    <li>英語（ビジネスレベル）</li>
+                    <li>日本語教師</li>
+                </ul>
+            </div>
+
+            <div>
+                <strong>主な経歴</strong>
+                <ul>
+                    <li>ダム・許認可行政</li>
+                    <li>在インドネシア日本大使館</li>
+                    <li>防災専門家（海外勤務）</li>
+                </ul>
+            </div>
+        </div>
+
+ <div class="second-penguin-box">
+    <div class="sp-text">
+        【ご案内】 外国人雇用・生活支援の事業はこちら →
+    </div>
+
+    <a href="https://second-penguin-lanning.github.io/SP-Main-Website/" 
+       target="_blank" 
+       class="sp-link">
+       セコンドペンギン企画 公式サイト
+    </a>
+</div>
+    </div>
+ <!-- 写真 -->
+    <div class="profile-photo">
+        <img src="myfoto.png" alt="德永良雄プロフィール写真">
+    </div>
+
+</div>
+       </div>
+</section>
+
+    <!-- Services Section -->
+   <section id="services" class="bg-accent-section">
+    <div class="container">
+        <h2>サービス紹介</h2>
+        <p>豊富な経験と専門知識を活かし、お客様のニーズに合わせた最適なサービスを提供いたします。</p>
+        <div class="grid">
+            <div class="card">
+                <h3>在留資格・ビザ申請</h3>
+                <p>外国人の在留資格認定、変更、更新などの入管手続きを専門的にサポート。就労ビザから永住申請まで幅広く対応いたします。</p>
+            </div>
+            <div class="card">
+                <h3>許認可申請</h3>
+                <p>建設業許可、飲食店営業許可、古物商許可など、各種許認可申請を専門的にサポート。複雑な手続きもお任せください。</p>
+            </div>
+            <div class="card">
+                <h3>相続・遺言・その他</h3>
+                <p>遺言書の作成、相続手続き、遺産分割協議書の作成をサポート。自動車登録や法人設立支援、契約書作成も承ります。</p>
+            </div>
+        </div>
+  </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="bg-light-section">
+    <div class="container">
+        <h2>料金プラン</h2>
+        <p>明確な料金体系で安心してご依頼いただけます。初回相談は無料です。</p>
+        <div class="grid">
+            <div class="card">
+                <h3>在留資格・ビザ</h3>
+                <span class="price-tag">30,000円〜</span>
+                <ul>
+                    <li>在留資格認定証明書交付申請</li>
+                    <li>在留資格変更許可申請</li>
+                    <li>在留期間更新許可申請</li>
+                    <li>永住許可 / 帰化許可サポート</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>許認可申請</h3>
+                <span class="price-tag">50,000円〜</span>
+                <ul>
+                    <li>建設業許可申請</li>
+                    <li>産業廃棄物処理業許可</li>
+                    <li>飲食店営業 / 古物商許可</li>
+                    <li>各種営業許可申請</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>相続・遺言</h3>
+                <span class="price-tag">35,000円〜</span>
+                <ul>
+                    <li>遺言書作成サポート</li>
+                    <li>相続人調査 / 相続関係説明図作成</li>
+                    <li>遺産分割協議書作成</li>
+                    <li>相続手続き代行</li>
+                </ul>
+            </div>
+        </div>
+        <p><small>※料金は案件の内容により変動する場合がございます。</small></p>
+       </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-accent-section">
+    <div class="container">
+        <h2>お客様の声</h2>
+        <div class="testimonial-item">
+            <p>「当ホテルでは外国人スタッフの採用を積極的に進めており、継続的にお世話になっております。複雑な入管手続きも迅速かつ正確で、スムーズに優秀な人材を確保できています」</p>
+            <span class="testimonial-name">株式会社〇〇ホテル 様</span>
+        </div>
+        <div class="testimonial-item">
+            <p>「太陽光発電事業の立ち上げに伴い、電気工事業の許認可でお世話になりました。必要書類の準備から行政機関との折衝まで、全てを丁寧にサポートしていただきました」</p>
+            <span class="testimonial-name">◇◇電気興業株式会社 様</span>
+        </div>
+ </div>
+    </section>
+
+ <section class="cta-section">
+    <h2>まずはお気軽にご相談ください</h2>
+    <p>初回相談無料。神戸の行政書士が直接対応いたします。</p>
+    <a href="tel:070-9192-2524" class="btn-white">今すぐ電話する</a>
+</section>
+
+<!-- Office Information Section -->
+<section id="office" class="bg-light-section">
+    <div class="container">
+        <h2>事務所情報</h2>
+
+        <table class="info-table">
+            <tr>
+                <th>事務所名</th>
+                <td>德永良雄行政書士事務所 (行政書士法人 サポートオフィス)</td>
+            </tr>
+             <tr>
+                <th>登録番号</th>
+                <td>日本行政書士連合会 第24303656号</td>
+            </tr>
+            <tr>
+                <th>メール</th>
+                <td>info@tokunaga-gyosei.jp</td>
+            </tr>
+            <tr>
+                <th>電話番号</th>
+                <td>070-9192-2524</td>
+            </tr>
+           <tr>
+                <th>所在地</th>
+                <td>
+                    〒658-0032<br>
+                    兵庫県神戸市東灘区向洋町中6-9<br>
+                    神戸ファッションマート 4N-07-01
+                </td>
+            </tr>
+            <tr>
+                <th>営業時間</th>
+                <td>
+                    平日 8:30〜17:00<br>
+                    土曜 9:00〜15:00（予約制）<br>
+                    ※日曜・祝日休業
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+   <!-- Contact & Access -->
+    <section id="contact" class="bg-light-section">
+    <div class="container">
+        <h2>お問い合わせ</h2>
+       
+<div class="contact-form">
+    <h3 style="margin-top:0;">お問い合わせフォーム</h3>
+    <form action="mailto:info@tokunaga-gyosei.jp" method="post" enctype="text/plain">
+        
+        <div class="form-group">
+            <label for="name">お名前（必須）</label>
+            <input type="text" id="name" name="お名前" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">メールアドレス（必須）</label>
+            <input type="email" id="email" name="メールアドレス" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">電話番号（任意）</label>
+            <input type="tel" id="phone" name="電話番号">
+        </div>
+
+        <div class="form-group">
+            <label for="message">お問い合わせ内容（必須）</label>
+            <textarea id="message" name="お問い合わせ内容" required></textarea>
+        </div>
+
+<div class="form-group">
+    <label>
+        <input type="checkbox" required>
+        <a href="private.html" target="_blank">
+            プライバシーポリシー
+        </a>
+        に同意の上、送信します。
+    </label>
+</div>
+
+        <button type="submit">送信する</button>
+
+    <p class="privacy-note">
+    ※内容確認後、通常1営業日以内にご返信いたします。<br>
+    個人情報の取扱いについては
+    <a href="private.html" target="_blank">プライバシーポリシー</a>
+    をご確認ください。
+</p>
+    </form>
+</div>
+</div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links" class="bg-light-section">
+    <div class="container">
+        <h2>関係リンク</h2>
+        <div class="links-grid">
+            <div class="link-group">
+                <h4>行政書士会</h4>
+                <ul>
+                    <li><a href="#">兵庫県行政書士会</a></li>
+                    <li><a href="#">日本行政書士会連合会</a></li>
+                </ul>
+            </div>
+            <div class="link-group">
+                <h4>建設業・許認可</h4>
+                <ul>
+                    <li><a href="#">JAC (日本建設業連合会)</a></li>
+                    <li><a href="#">国土交通省 (建設業許可)</a></li>
+                    <li><a href="#">警察庁 (古物商・車庫証明)</a></li>
+                </ul>
+            </div>
+            <div class="link-group">
+                <h4>補助金・支援</h4>
+                <ul>
+                    <li><a href="#">ミラサポplus</a></li>
+                    <li><a href="#">J-Net21 (中小機構)</a></li>
+                    <li><a href="#">中小企業庁</a></li>
+                </ul>
+            </div>
+            <div class="link-group">
+                <h4>行政機関</h4>
+                <ul>
+                    <li><a href="#">法務局 (登記・供託)</a></li>
+                    <li><a href="#">出入国在留管理庁 (ビザ)</a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="font-size: 0.8rem; color: #888; margin-top: 1.5rem;">※最新の情報については、各機関の公式サイトをご確認ください [5]。</p>
+  </div>
+    </section>
+
+</div>
+
+<footer>
+    <div class="footer-contacts">
+        <p>電話: 070-9192-2524 | メール: info@tokunaga-gyosei.jp</p>
+    </div>
+
+    <p>
+        <a href="private.html" style="color:white; text-decoration:underline;">
+            プライバシーポリシー
+        </a>
+    </p>
+
+    <p>信頼と実績の行政書士事務所として、お客様のビジネスを全力でサポートいたします。</p>
+    <p>&copy; 2024 行政書士 サポートオフィス. All rights reserved.</p>
+</footer>
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.getElementById("nav");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("show");
+});
+</script>
+</body>
+</html>
