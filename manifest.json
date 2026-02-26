@@ -1,0 +1,23 @@
+{
+  "name": "德永良雄行政書士事務所",
+  "short_name": "徳永行政書士",
+  "description": "神戸の行政書士。ビザ申請・許認可申請・相続遺言サポート。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f7fa",
+  "theme_color": "#0b3d5c",
+  "icons": [
+    {
+      "src": "gyosei_logo_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "gyosei_logo_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
