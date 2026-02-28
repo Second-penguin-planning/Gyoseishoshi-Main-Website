@@ -18,13 +18,13 @@
 
 <style>
 :root {
-    --primary: #0b3d5c;
-    --accent: #f5a623;
-    --bg-light: #f4f7fa;
-    --text-main: #222;
+    --primary: #1f2f3a;       /* 深いブルーグレー（重厚） */
+    --accent: #b89b5e;        /* 落ち着いたゴールド */
+    --bg-light: #f3f4f5;      /* ややグレー寄り背景 */
+    --text-main: #1a1a1a;
     --text-sub: #555;
     --white: #ffffff;
-    --border: #e5eaf0;
+    --border: #e2e4e7;
 }
 
 /* Base */
@@ -89,7 +89,7 @@ header {
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, var(--primary), #145a86);
+    background: linear-gradient(135deg, #1f2f3a, #2f3f4c);
     color: white;
     text-align: center;
     padding: 4rem 1rem;
@@ -114,8 +114,9 @@ header {
     text-decoration: none;
     transition: 0.3s;
 }
-.hero .btn:hover {
-    background: #ffb84d;
+.hero .btn:hover,
+.contact-form button:hover {
+    background: #a8894a;
 }
 
 /* Container */
@@ -339,7 +340,7 @@ footer p {
 .testimonial-item {
     background: white;
     padding: 2rem;
-    border-left: 6px solid var(--accent);
+    border-left: 4px solid var(--accent);
     border-radius: 10px;
     margin-bottom: 2rem;
     box-shadow: 0 8px 20px rgba(0,0,0,0.05);
@@ -354,7 +355,7 @@ footer p {
 
 /* CTA帯 */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary), #145a86);
+    background: linear-gradient(135deg, #1f2f3a, #2f3f4c);
     color: white;
     text-align: center;
     padding: 4rem 1rem;
