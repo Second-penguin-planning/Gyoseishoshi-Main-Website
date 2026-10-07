@@ -27,6 +27,18 @@ if (hamburger && nav) {
 }
 
     /* =============================
+       CTAボタン → お問い合わせフォームの相談内容を自動選択
+    ============================= */
+
+    const serviceSelect = document.querySelector('.contact-form select[name="service"]');
+
+    document.querySelectorAll("[data-topic]").forEach(btn => {
+        btn.addEventListener("click", () => {
+            if (serviceSelect) serviceSelect.value = btn.dataset.topic;
+        });
+    });
+
+    /* =============================
        アコーディオン
     ============================= */
 

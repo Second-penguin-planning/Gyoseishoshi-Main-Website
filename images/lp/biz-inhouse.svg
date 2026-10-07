@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" role="img" aria-label="支援の内製化イメージ">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6f0fd"/>
+      <stop offset="1" stop-color="#c9defa"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#g)"/>
+  <circle cx="520" cy="40" r="110" fill="#2f7de1" opacity=".10"/>
+  <circle cx="70" cy="300" r="90" fill="#2f7de1" opacity=".08"/>
+  <!-- building -->
+  <rect x="210" y="70" width="180" height="200" rx="10" fill="#1f2f3a"/>
+  <g fill="#7fb2f0">
+    <rect x="232" y="94" width="30" height="24" rx="3"/><rect x="285" y="94" width="30" height="24" rx="3"/><rect x="338" y="94" width="30" height="24" rx="3"/>
+    <rect x="232" y="134" width="30" height="24" rx="3"/><rect x="285" y="134" width="30" height="24" rx="3"/><rect x="338" y="134" width="30" height="24" rx="3"/>
+    <rect x="232" y="174" width="30" height="24" rx="3"/><rect x="338" y="174" width="30" height="24" rx="3"/>
+  </g>
+  <rect x="282" y="214" width="36" height="56" rx="4" fill="#b89b5e"/>
+  <rect x="150" y="268" width="300" height="6" rx="3" fill="#1f2f3a" opacity=".25"/>
+  <!-- shield -->
+  <path d="M430 120 l52 -18 l52 18 v40 c0 42 -30 66 -52 76 c-22 -10 -52 -34 -52 -76z" fill="#2f7de1"/>
+  <path d="M458 166 l18 18 l34 -38" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- people -->
+  <g fill="#2f7de1">
+    <circle cx="100" cy="150" r="22"/><path d="M60 230 c0 -34 18 -52 40 -52 s40 18 40 52z"/>
+  </g>
+  <g fill="#b89b5e">
+    <circle cx="160" cy="170" r="18"/><path d="M128 236 c0 -28 14 -42 32 -42 s32 14 32 42z"/>
+  </g>
+</svg>

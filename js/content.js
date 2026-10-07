@@ -2,6 +2,26 @@ window.siteContent = {
   ja: {
     news: [
       {
+        date: "2026.09.30",
+        text: "【解説】「育成就労制度」2027年4月施行へ。技能実習からの移行で企業が今から準備すべきこと",
+        url: ""
+      },
+      {
+        date: "2026.09.16",
+        text: "【解説】訪問介護への外国人材の従事 ― 受入れ事業所に求められる遵守事項を整理",
+        url: ""
+      },
+      {
+        date: "2026.08.27",
+        text: "【解説】建設分野の特定技能 ― 受入計画の認定から入国までの流れと注意点",
+        url: ""
+      },
+      {
+        date: "2026.08.05",
+        text: "【解説】登録支援機関への委託をやめて「自社支援」に切り替えるための要件とは",
+        url: ""
+      },
+      {
         date: "2026.04",
         text: "在留資格「技術・人文知識・国際業務」で日本語能力を求める方向",
         url: ""
@@ -23,6 +43,27 @@ window.siteContent = {
       }
     ],
     announcements: [
+      {
+        date: "2026.10.01",
+        text: "【フィリピンの方へ】Facebookメッセンジャーでの無料相談を積極受付中！ / Free consultation via Messenger!",
+        url: "https://m.me/second.penguin/",
+        featured: true
+      },
+      {
+        date: "2026.09.24",
+        text: "訪問介護事業所様向け「外国人材の雇用サポート」の受付を開始しました",
+        url: "/#biz-care"
+      },
+      {
+        date: "2026.09.10",
+        text: "建設業者様向け「フィリピン人建設人材 一気通貫雇用サポート」を開始しました",
+        url: "/#biz-construction"
+      },
+      {
+        date: "2026.09.01",
+        text: "登録支援機関に頼らない「支援の内製化（自社支援）」構築サポートを開始しました",
+        url: "/#biz-inhouse"
+      },
       {
         date: "2026.03",
         text: "ビジネスFacebookを立ち上げニュース解説などを開始しました。",
@@ -85,6 +126,11 @@ window.siteContent = {
     ],
     announcements: [
       {
+        date: "2026.10.01",
+        text: "[For Filipinos] Free consultation on jobs and visas via Facebook Messenger — message us anytime!",
+        url: "https://m.me/second.penguin/"
+      },
+      {
         date: "2026.03",
         text: "We have launched our business Facebook page and started providing news analysis.",
         url: ""
@@ -145,6 +191,11 @@ window.siteContent = {
       }
     ],
     announcements: [
+      {
+        date: "2026.10.01",
+        text: "[Para sa mga Pilipino] Libreng konsultasyon tungkol sa trabaho at visa sa Facebook Messenger — mag-message lang po kayo!",
+        url: "https://m.me/second.penguin/"
+      },
       {
         date: "2026.03",
         text: "Nag-launch kami ng aming business Facebook page at nagsimula ng pagbibigay ng news analysis.",
@@ -290,6 +341,49 @@ document.addEventListener("DOMContentLoaded", () => {
         </li>
       `;
     }).join("");
+  }
+
+  // ── News & Topics（トップページ：お知らせ＋ニュースを日付順に統合） ──
+  const topicsList = document.getElementById("topicsList");
+  if (topicsList && content) {
+    const typeLabels = { announcements: "お知らせ", news: "入管・制度" };
+    const toTime = d => {
+      const [y, m = 1, day = 1] = String(d || "").split(".").map(Number);
+      return new Date(y, m - 1, day).getTime() || 0;
+    };
+    const NEW_DAYS = 45;
+    const items = ["announcements", "news"]
+      .flatMap(type => (content[type] || []).map(item => ({ ...item, type })))
+      .filter(item => !item.featured)
+      .sort((a, b) => toTime(b.date) - toTime(a.date));
+
+    const render = filter => {
+      const list = items.filter(item => filter === "all" || item.type === filter).slice(0, 6);
+      topicsList.innerHTML = list.map(item => {
+        const isNew = Date.now() - toTime(item.date) < NEW_DAYS * 86400000;
+        const external = /^https?:/.test(item.url || "");
+        const inner = `
+          <span class="lp-news-date">${item.date || ""}</span>
+          <span class="lp-news-cat lp-news-cat--${item.type}">${typeLabels[item.type]}</span>
+          ${isNew ? '<span class="lp-pill lp-pill--new">NEW</span>' : ""}
+          <span class="lp-news-text">${item.text || ""}</span>`;
+        return item.url
+          ? `<li><a href="${item.url}"${external ? ' target="_blank" rel="noopener"' : ""}>${inner}<i class="fa-solid fa-chevron-right lp-news-arrow"></i></a></li>`
+          : `<li><div>${inner}</div></li>`;
+      }).join("");
+    };
+
+    document.querySelectorAll(".lp-news-tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".lp-news-tab").forEach(t => {
+          const active = t === tab;
+          t.classList.toggle("is-active", active);
+          t.setAttribute("aria-selected", String(active));
+        });
+        render(tab.dataset.filter);
+      });
+    });
+    render("all");
   }
 
   // ── Q&A ──

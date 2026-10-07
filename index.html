@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/lp-top.css">
 
     <link rel="canonical" href="https://tokunaga-gyosei.jp/">
     <link rel="icon" type="image/png" sizes="32x32" href="images/gyosei_logo_192.png">
@@ -93,68 +94,298 @@
     </header>
 
     <main>
-        <section class="hero" id="top">
-            <div class="hero-inner">
-                <div class="hero-left">
-                    <h1>外国人雇用・各種在留資格申請｜永住・家族<br>フィリピン人特定技能サポート｜全国対応の行政書士</h1>
-                    <p class="hero-sub">特定技能・就労ビザ・在留資格変更など入管手続きを行政書士が全国対応でサポート</p>
-                    <div class="hero-badge">初回相談 無料 ー 問い合わせは通常24時間以内に回答します｜全国オンライン対応</div>
-                    
-                    <div class="hero-links">
-                       <a href="#company-services" class="hero-link-box">
-    <h3>企業様へ</h3>
-    <p>
-        ・外国人雇用・各種ビザ申請<br>　(企業/組合/支援機関/学校)<br>
-        ・外国人雇用全般の支援<br>　月額15,000円/人～　⋆1)<br>
-        ・雇用者相談/コンサルティング
-    </p>
-</a>
-                      <a href="#country-services" class="hero-link-box">
-    <h3>フィリピン・インドネシアの方へ</h3>
-    <p>
-        ・特定技能/特定活動/育成就労<br>
-        　技術人文国際/留学ビザ 申請<br>
-        ・渉外戸籍、永住/帰化 申請<br>・求職者登録(無料)/紹介　⋆1)
-    </p>
-</a>
-                        <a href="#worker-services" class="hero-link-box">
-                            <h3>外国籍の方へ</h3>
-                            <p>
-                                ・在留期間更新(ビザ更新申請)<br>
-                                ・会社設立/更新の相談と手続<br>
-                                ・日本の各種行政手続に関する<br>　コンサルティング
-                            </p>
-                        </a>
-                    </div>
-
-                    <div class="hero-notice">
-                        <span class="text-white">⋆1) 【行政書士＋登録支援機関 ワンストップ対応】</span><br>
-                        <span class="text-white">外国人雇用全般の支援と求職者登録/紹介は、併せて運営している</span><br>
-                        <a href="http://second-penguin.com/" target="_blank" class="sp-link-blue">セコンドペンギン企画</a>
-                        <span class="text-white">（登録支援機関、有料職業紹介事業登録）にて対応します。  </span>
-                    </div>
+        <!-- ========== ファーストビュー（LP型ヒーロー） ========== -->
+        <section class="lp-hero" id="top">
+            <div class="lp-hero-bg" aria-hidden="true"></div>
+            <div class="lp-container">
+                <div class="lp-hero-head">
+                    <h1 class="lp-hero-title">
+                        <span class="lp-hero-eyebrow">外国人雇用・在留資格申請｜フィリピン人材・特定技能｜全国対応の行政書士</span>
+                        <span class="lp-hero-catch"><span class="lp-nw">外国人材の<em>「採用」</em>も</span><span class="lp-nw"><em>「支援」</em>も、</span><br class="lp-br-pc"><span class="lp-nw">御社の<strong>“強み”</strong>に変える。</span></span>
+                    </h1>
+                    <p class="lp-hero-lead">
+                        元国家公務員31年・申請取次行政書士が、法務の視点から最後まで伴走。<br class="lp-br-pc">
+                        コンプライアンスを守りながら、<strong>人手不足を「仕組み」で解決</strong>します。
+                    </p>
+                    <ul class="lp-hero-trust">
+                        <li><i class="fa-solid fa-scale-balanced"></i>申請取次行政書士</li>
+                        <li><i class="fa-solid fa-landmark"></i>行政実務31年</li>
+                        <li><i class="fa-solid fa-earth-asia"></i>フィリピン・インドネシアに精通</li>
+                        <li><i class="fa-solid fa-laptop"></i>全国オンライン対応</li>
+                        <li class="is-accent"><i class="fa-solid fa-gift"></i>初回相談 無料</li>
+                    </ul>
                 </div>
 
-   <div class="hero-right-boxes">
-                 <div class="hero-news-box hero-announcement-box">
-                        <div class="hero-news-head">
-                            <h3>お知らせ</h3>
-                            <a href="/news/?type=announcements" class="hero-all-link">一覧はコチラ→</a>
-                        </div>
-                        <ul id="announcementList" class="hero-list"></ul>
-                    </div>
+                <p class="lp-hero-section-label"><span>3つの主力サポート</span></p>
 
-                    <div class="hero-news-box">
-                        <div class="hero-news-head">
-                            <h3>ニュース</h3>
-                            <a href="/news/" class="hero-all-link">一覧はコチラ→</a>
+                <div class="lp-biz-grid">
+                    <!-- ① 支援の内製化 -->
+                    <article class="lp-biz-card lp-biz-card--inhouse">
+                        <div class="lp-biz-media">
+                            <!-- 画像差し替え可：推奨 1200×640px（社内で外国人スタッフと面談する担当者の写真など） -->
+                            <img src="images/lp/biz-inhouse.svg" width="600" height="320"
+                                 alt="社内担当者が外国人材の支援を自社で行うイメージ">
+                            <span class="lp-biz-num">01</span>
                         </div>
-                        <ul id="newsList" class="hero-list"></ul>
-                    </div>
+                        <div class="lp-biz-body">
+                            <p class="lp-biz-target"><i class="fa-solid fa-building"></i>外国人材を自社で直接管理したい企業様へ</p>
+                            <h2 class="lp-biz-title">登録支援機関に頼らない<br><span>「支援の内製化（自社支援）」</span>構築サポート</h2>
+                            <p class="lp-biz-copy">毎月の委託費を<strong>コストカット</strong>しながら、<strong>支援ノウハウを社内に蓄積</strong>。行政書士が法令適合をチェックするので、自社支援でも安心です。</p>
+                            <ul class="lp-biz-points">
+                                <li>支援計画・義務的支援の社内体制を設計</li>
+                                <li>定期届出・記録様式をテンプレート化</li>
+                                <li>届出漏れ・法令違反を防ぐ顧問チェック</li>
+                            </ul>
+                            <div class="lp-biz-cta">
+                                <a href="#contact" class="lp-btn lp-btn--primary" data-topic="支援の内製化（自社支援）">
+                                    <i class="fa-solid fa-comments"></i>無料相談はこちら
+                                </a>
+                                <a href="#biz-inhouse" class="lp-btn lp-btn--ghost">サポートの詳細を見る<i class="fa-solid fa-arrow-down"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ② フィリピン建設人材 -->
+                    <article class="lp-biz-card lp-biz-card--construction">
+                        <div class="lp-biz-media">
+                            <!-- 画像差し替え可：推奨 1200×640px（建設現場で働くフィリピン人技能者の写真など） -->
+                            <img src="images/lp/biz-construction.svg" width="600" height="320"
+                                 alt="建設現場で活躍するフィリピン人材のイメージ">
+                            <span class="lp-biz-num">02</span>
+                            <span class="lp-biz-flag">🇵🇭 PHILIPPINES</span>
+                        </div>
+                        <div class="lp-biz-body">
+                            <p class="lp-biz-target"><i class="fa-solid fa-helmet-safety"></i>深刻な人手不足に悩む建設業者様へ</p>
+                            <h2 class="lp-biz-title">フィリピン人の優秀な<br><span>建設人材 一気通貫</span>雇用サポート</h2>
+                            <p class="lp-biz-copy"><strong>現地での募集からビザ申請、入社後の定着まで</strong>まるごとお任せ。窓口はひとつ、だから早くて安心です。</p>
+                            <ul class="lp-biz-points">
+                                <li>特定技能・技人国・高度専門職まで幅広く対応</li>
+                                <li>建設特定技能受入計画の認定申請もサポート</li>
+                                <li>入国後の生活立ち上げ・定着フォロー</li>
+                            </ul>
+                            <div class="lp-biz-cta">
+                                <a href="#contact" class="lp-btn lp-btn--primary" data-topic="フィリピン建設人材の雇用">
+                                    <i class="fa-solid fa-comments"></i>無料相談はこちら
+                                </a>
+                                <a href="#biz-construction" class="lp-btn lp-btn--ghost">サポートの詳細を見る<i class="fa-solid fa-arrow-down"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- ③ 訪問介護人材 -->
+                    <article class="lp-biz-card lp-biz-card--care">
+                        <div class="lp-biz-media">
+                            <!-- 画像差し替え可：推奨 1200×640px（利用者宅を訪問する外国人介護スタッフの写真など） -->
+                            <img src="images/lp/biz-care.svg" width="600" height="320"
+                                 alt="訪問介護で活躍する外国人介護人材のイメージ">
+                            <span class="lp-biz-num">03</span>
+                        </div>
+                        <div class="lp-biz-body">
+                            <p class="lp-biz-target"><i class="fa-solid fa-house-medical"></i>人材確保が急務な訪問介護事業所様へ</p>
+                            <h2 class="lp-biz-title">ハードルの高い分野だからこそ<br><span>訪問介護人材</span>の雇用サポート</h2>
+                            <p class="lp-biz-copy">要件が厳しい訪問系サービスでも、<strong>適法かつ確実な外国人材採用スキーム</strong>を専門家が設計します。</p>
+                            <ul class="lp-biz-points">
+                                <li>訪問系サービスの従事要件を事前に診断</li>
+                                <li>研修・同行訪問など遵守事項の体制づくり</li>
+                                <li>在留資格の選定から入管申請まで一貫対応</li>
+                            </ul>
+                            <div class="lp-biz-cta">
+                                <a href="#contact" class="lp-btn lp-btn--primary" data-topic="訪問介護人材の雇用">
+                                    <i class="fa-solid fa-comments"></i>無料相談はこちら
+                                </a>
+                                <a href="#biz-care" class="lp-btn lp-btn--ghost">サポートの詳細を見る<i class="fa-solid fa-arrow-down"></i></a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
 
+                <!-- その他のご相談（既存の3区分への導線） -->
+                <div class="lp-hero-others">
+                    <p class="lp-hero-others-label">その他のご相談はこちら</p>
+                    <div class="lp-hero-others-links">
+                        <a href="#company-services"><i class="fa-solid fa-briefcase"></i><span>企業様<small>ビザ申請・顧問・月額支援</small></span></a>
+                        <a href="#country-services"><i class="fa-solid fa-earth-asia"></i><span>フィリピン・インドネシアの方<small>就職・ビザ・求職者登録（無料）</small></span></a>
+                        <a href="#worker-services"><i class="fa-solid fa-passport"></i><span>外国籍の方<small>更新・永住・帰化・会社設立</small></span></a>
+                    </div>
+                    <p class="lp-hero-note">
+                        【行政書士＋登録支援機関 ワンストップ対応】外国人雇用全般の支援と求職者登録/紹介は、併せて運営している
+                        <a href="http://second-penguin.com/" target="_blank" rel="noopener">セコンドペンギン企画</a>（登録支援機関、有料職業紹介事業）にて対応します。
+                    </p>
+                </div>
             </div>
         </section>
+        <!-- ========== /ファーストビュー ========== -->
+
+        <!-- ========== News & Topics ========== -->
+        <section id="news" class="lp-news">
+            <div class="lp-container">
+                <div class="lp-sec-head">
+                    <p class="lp-sec-eyebrow">NEWS &amp; TOPICS</p>
+                    <h2 class="lp-sec-title">お知らせ・最新トピックス</h2>
+                </div>
+
+                <!-- 10月1日付 トップニュース -->
+                <article class="lp-news-featured">
+                    <div class="lp-news-featured-icon" aria-hidden="true">
+                        <i class="fa-brands fa-facebook-messenger"></i>
+                    </div>
+                    <div class="lp-news-featured-body">
+                        <div class="lp-news-featured-meta">
+                            <span class="lp-pill lp-pill--pickup">PICK UP</span>
+                            <span class="lp-pill lp-pill--new">NEW</span>
+                            <time datetime="2026-10-01">2026.10.01</time>
+                            <span class="lp-news-cat">お知らせ</span>
+                        </div>
+                        <h3 class="lp-news-featured-title">【フィリピンの方へ】Facebookメッセンジャーでの無料相談を積極受付中！</h3>
+                        <p class="lp-news-featured-sub" lang="en">To our Filipino friends: Free consultation via Facebook Messenger — just send us a message!</p>
+                        <p class="lp-news-featured-sub" lang="tl">Para sa mga Pilipino: Libreng konsultasyon sa Facebook Messenger — mag-message lang po kayo!</p>
+                        <p class="lp-news-featured-text">
+                            日本での就職・転職、ビザ（在留資格）の取得・更新、家族の呼び寄せなど、フィリピンの方からのご相談を大歓迎しています。
+                            いつも使っているFacebookメッセンジャーから、<strong>日本語・English・Tagalog</strong>でお気軽にメッセージをお送りください。相談は無料です。
+                        </p>
+                        <ul class="lp-news-featured-tags">
+                            <li>就職・転職 / Trabaho</li>
+                            <li>ビザ申請・更新 / Visa</li>
+                            <li>特定技能 / SSW</li>
+                            <li>家族の呼び寄せ / Pamilya</li>
+                        </ul>
+                        <a href="https://m.me/second.penguin/" target="_blank" rel="noopener" class="lp-btn lp-btn--messenger">
+                            <i class="fa-brands fa-facebook-messenger"></i>
+                            <span>Messengerで無料相談する<small>Message us now / Mag-message na po!</small></span>
+                        </a>
+                    </div>
+                </article>
+
+                <div class="lp-news-board">
+                    <div class="lp-news-tabs" role="tablist" aria-label="お知らせの絞り込み">
+                        <button type="button" class="lp-news-tab is-active" data-filter="all" role="tab" aria-selected="true">すべて</button>
+                        <button type="button" class="lp-news-tab" data-filter="announcements" role="tab" aria-selected="false">お知らせ</button>
+                        <button type="button" class="lp-news-tab" data-filter="news" role="tab" aria-selected="false">入管・制度トピックス</button>
+                    </div>
+                    <ul id="topicsList" class="lp-news-list"></ul>
+                    <div class="lp-news-more">
+                        <a href="/news/">お知らせ・ニュース一覧を見る<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== /News & Topics ========== -->
+
+        <!-- ========== 3つの主力サポート 詳細 ========== -->
+        <section id="biz-detail" class="lp-detail">
+            <div class="lp-container">
+                <div class="lp-sec-head">
+                    <p class="lp-sec-eyebrow">OUR CORE SUPPORT</p>
+                    <h2 class="lp-sec-title">3つの主力サポートの詳細</h2>
+                </div>
+
+                <div class="lp-detail-block lp-detail-block--inhouse" id="biz-inhouse">
+                    <div class="lp-detail-head">
+                        <span class="lp-detail-num">01</span>
+                        <h3>登録支援機関に頼らない「支援の内製化（自社支援）」構築サポート</h3>
+                    </div>
+                    <div class="lp-detail-cols">
+                        <div class="lp-detail-col">
+                            <h4><i class="fa-solid fa-circle-question"></i>こんなお悩みありませんか？</h4>
+                            <ul class="lp-check-list lp-check-list--worry">
+                                <li>登録支援機関への委託費が人数分かさみ、負担になっている</li>
+                                <li>支援の中身が見えず、社内にノウハウが残らない</li>
+                                <li>自社支援に切り替えたいが、法令違反や届出漏れが怖い</li>
+                            </ul>
+                        </div>
+                        <div class="lp-detail-col">
+                            <h4><i class="fa-solid fa-circle-check"></i>当事務所のサポート</h4>
+                            <ul class="lp-check-list">
+                                <li>自社支援の要件確認と、支援責任者・支援担当者の体制設計</li>
+                                <li>1号特定技能外国人支援計画の作成・見直し</li>
+                                <li>定期届出・随時届出、支援記録の様式整備と運用指導</li>
+                                <li>切り替え後も顧問として法令適合を継続チェック</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ol class="lp-flow">
+                        <li><span>STEP 1</span>無料相談・現状診断</li>
+                        <li><span>STEP 2</span>体制設計・計画作成</li>
+                        <li><span>STEP 3</span>届出・切り替え手続き</li>
+                        <li><span>STEP 4</span>運用定着・顧問チェック</li>
+                    </ol>
+                    <div class="lp-detail-cta">
+                        <a href="#contact" class="lp-btn lp-btn--primary" data-topic="支援の内製化（自社支援）"><i class="fa-solid fa-comments"></i>内製化について無料相談する</a>
+                    </div>
+                </div>
+
+                <div class="lp-detail-block lp-detail-block--construction" id="biz-construction">
+                    <div class="lp-detail-head">
+                        <span class="lp-detail-num">02</span>
+                        <h3>フィリピン人の優秀な建設人材 一気通貫雇用サポート</h3>
+                    </div>
+                    <div class="lp-detail-cols">
+                        <div class="lp-detail-col">
+                            <h4><i class="fa-solid fa-circle-question"></i>こんなお悩みありませんか？</h4>
+                            <ul class="lp-check-list lp-check-list--worry">
+                                <li>求人を出しても若手が集まらず、現場が回らない</li>
+                                <li>建設分野は手続きが多く、何から始めればいいか分からない</li>
+                                <li>せっかく採用しても、すぐ辞めてしまわないか不安</li>
+                            </ul>
+                        </div>
+                        <div class="lp-detail-col">
+                            <h4><i class="fa-solid fa-circle-check"></i>当事務所のサポート</h4>
+                            <ul class="lp-check-list">
+                                <li>職種・経歴に応じて<strong>特定技能／技術・人文知識・国際業務／高度専門職</strong>を最適設計</li>
+                                <li>フィリピン現地での募集・面接調整（現地ネットワーク直結）</li>
+                                <li>建設特定技能受入計画の認定申請、在留資格認定証明書交付申請</li>
+                                <li>入国後の住居・役所手続き・生活オリエンテーション、定着フォロー</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ol class="lp-flow">
+                        <li><span>STEP 1</span>無料相談・求人要件整理</li>
+                        <li><span>STEP 2</span>現地募集・面接</li>
+                        <li><span>STEP 3</span>受入計画・ビザ申請</li>
+                        <li><span>STEP 4</span>入国・入社・定着支援</li>
+                    </ol>
+                    <div class="lp-detail-cta">
+                        <a href="#contact" class="lp-btn lp-btn--primary" data-topic="フィリピン建設人材の雇用"><i class="fa-solid fa-comments"></i>建設人材について無料相談する</a>
+                    </div>
+                </div>
+
+                <div class="lp-detail-block lp-detail-block--care" id="biz-care">
+                    <div class="lp-detail-head">
+                        <span class="lp-detail-num">03</span>
+                        <h3>訪問介護人材の雇用サポート</h3>
+                    </div>
+                    <div class="lp-detail-cols">
+                        <div class="lp-detail-col">
+                            <h4><i class="fa-solid fa-circle-question"></i>こんなお悩みありませんか？</h4>
+                            <ul class="lp-check-list lp-check-list--worry">
+                                <li>ヘルパーの高齢化・欠員で、依頼を断らざるを得ない</li>
+                                <li>外国人が訪問介護に従事できる条件がよく分からない</li>
+                                <li>受入れ後に指導・監査で指摘を受けないか心配</li>
+                            </ul>
+                        </div>
+                        <div class="lp-detail-col">
+                            <h4><i class="fa-solid fa-circle-check"></i>当事務所のサポート</h4>
+                            <ul class="lp-check-list">
+                                <li>候補者・事業所が訪問系サービスの従事要件を満たすか事前診断</li>
+                                <li>研修、同行訪問、キャリアアップ計画、ハラスメント対策など遵守事項の体制整備</li>
+                                <li>特定技能（介護）等の在留資格選定から入管申請まで一貫対応</li>
+                                <li>受入れ後の届出・更新管理まで継続サポート</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ol class="lp-flow">
+                        <li><span>STEP 1</span>無料相談・要件診断</li>
+                        <li><span>STEP 2</span>受入れ体制の整備</li>
+                        <li><span>STEP 3</span>採用・在留資格申請</li>
+                        <li><span>STEP 4</span>就労開始・継続フォロー</li>
+                    </ol>
+                    <div class="lp-detail-cta">
+                        <a href="#contact" class="lp-btn lp-btn--primary" data-topic="訪問介護人材の雇用"><i class="fa-solid fa-comments"></i>訪問介護人材について無料相談する</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== /3つの主力サポート 詳細 ========== -->
 
         <!-- ========== 選ばれる6つの理由 ========== -->
         <section id="why-choose" class="why-choose-section">
@@ -724,6 +955,9 @@
                     <div class="form-row">
                         <label>相談内容</label>
                         <select name="service">
+                            <option>支援の内製化（自社支援）</option>
+                            <option>フィリピン建設人材の雇用</option>
+                            <option>訪問介護人材の雇用</option>
                             <option>特定技能ビザ</option>
                             <option>在留資格変更</option>
                             <option>在留資格更新</option>
@@ -830,7 +1064,6 @@
         </div>
     </footer>
 <script src="/js/content.js"></script>
-<script src="/js/content-loader.js"></script>
 <script src="/js/common.js"></script>
 </body>
 

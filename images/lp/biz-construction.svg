@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320" role="img" aria-label="建設人材イメージ">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff4dc"/>
+      <stop offset="1" stop-color="#fde0a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="320" fill="url(#g)"/>
+  <circle cx="90" cy="50" r="100" fill="#f2a516" opacity=".15"/>
+  <!-- crane -->
+  <g stroke="#1f2f3a" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M420 290 V60"/>
+    <path d="M330 60 H560"/>
+    <path d="M420 60 L520 40"/>
+    <path d="M520 60 V120"/>
+  </g>
+  <rect x="500" y="120" width="40" height="28" rx="4" fill="#f2a516"/>
+  <g stroke="#1f2f3a" stroke-width="3" opacity=".5">
+    <path d="M420 80 l-20 20 l20 20 l-20 20 l20 20 l-20 20 l20 20 l-20 20 l20 20 l-20 20"/>
+  </g>
+  <!-- building frame -->
+  <g fill="#1f2f3a" opacity=".85">
+    <rect x="250" y="170" width="120" height="8"/><rect x="250" y="220" width="120" height="8"/>
+    <rect x="250" y="170" width="8" height="120"/><rect x="310" y="170" width="8" height="120"/><rect x="362" y="170" width="8" height="120"/>
+  </g>
+  <!-- worker with helmet -->
+  <circle cx="150" cy="168" r="34" fill="#c98f5f"/>
+  <path d="M112 162 a38 38 0 0 1 76 0z" fill="#f2a516"/>
+  <rect x="106" y="158" width="88" height="10" rx="5" fill="#d98c08"/>
+  <path d="M84 300 c0 -60 30 -92 66 -92 s66 32 66 92z" fill="#2f5d8a"/>
+  <path d="M128 212 l22 40 l22 -40" fill="#f2a516"/>
+  <!-- PH flag ribbon -->
+  <g transform="translate(36 30)">
+    <rect width="72" height="44" rx="6" fill="#0038a8"/>
+    <rect y="22" width="72" height="22" rx="0" fill="#ce1126"/>
+    <path d="M0 0 L36 22 L0 44z" fill="#fff"/>
+    <circle cx="12" cy="22" r="5" fill="#fcd116"/>
+  </g>
+  <rect x="0" y="290" width="600" height="30" fill="#1f2f3a" opacity=".12"/>
+</svg>
